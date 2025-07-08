@@ -21,7 +21,7 @@ export const ProductSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action: PayloadAction<CartItem>) => {
-      let findproduct = state.cartitem.findIndex(
+      const findproduct = state.cartitem.findIndex(
         (item) => item.id == action.payload.id
       );
       if (findproduct !== -1) {
@@ -48,10 +48,20 @@ export const ProductSlice = createSlice({
       state.cartitem.splice(action.payload, 1);
       localStorage.setItem("cart", JSON.stringify(state.cartitem));
     },
+
+    clearCart: (state) => {
+      state.cartitem = [];
+      localStorage.setItem("cart", JSON.stringify(state.cartitem));
+    },
   },
 });
 
-export const { addToCart, productincrement, productdeccrement, productremove } =
-  ProductSlice.actions;
+export const {
+  addToCart,
+  productincrement,
+  productdeccrement,
+  productremove,
+  clearCart, 
+} = ProductSlice.actions;
 
 export default ProductSlice.reducer;

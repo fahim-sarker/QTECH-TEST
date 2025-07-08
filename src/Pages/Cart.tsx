@@ -8,6 +8,7 @@ import {
   productdeccrement,
   productincrement,
   productremove,
+  clearCart, 
 } from "../Slice/ProductSlice";
 
 interface ProductItem {
@@ -71,7 +72,7 @@ const Cart = () => {
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleFinalCheckout = () => {
@@ -85,6 +86,8 @@ const Cart = () => {
     }
 
     toast.success("Order placed successfully!", { position: "top-right" });
+
+    dispatch(clearCart()); 
 
     setShowModal(false);
     setFormData({ name: "", email: "", address: "" });
@@ -170,7 +173,6 @@ const Cart = () => {
           </div>
         </div>
 
-        {/* Cart */}
         <p className="text-end text-[16px] font-sans font-bold py-4">
           Cart totals
         </p>
@@ -206,7 +208,6 @@ const Cart = () => {
           </button>
         </div>
 
-        {/* Modal */}
         {showModal && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4">
             <div className="bg-white p-6 rounded-md w-full max-w-[400px]">
