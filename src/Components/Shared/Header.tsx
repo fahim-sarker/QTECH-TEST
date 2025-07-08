@@ -31,14 +31,12 @@ const Header = () => {
     <nav className="fixed top-0 left-0 w-full bg-white z-50 px-4 lg:px-0 lg:py-5 py-3">
       <Container>
         <Flex className="justify-between items-center">
-          {/* Logo */}
           <div className="w-1/3 items-center">
             <Link to="/">
               <img src={Logo} alt="logo" />
             </Link>
           </div>
 
-          {/* Menu Items */}
           <div className="w-2/3 items-center">
             <ul
               ref={sidebarRef}
@@ -48,7 +46,6 @@ const Header = () => {
                   : "top-0 left-[-100%] h-full"
               }`}
             >
-              {/* Cross button for closing (mobile only) */}
               <li className="flex justify-end pr-5 lg:hidden">
                 <button onClick={() => setShow(false)}>
                   <RxCross2 className="text-white text-2xl" />
@@ -58,7 +55,7 @@ const Header = () => {
               {["Home", "Shop", "About", "Contact", "Journal"].map(item => (
                 <li key={item}>
                   <Link
-                    to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    to={item === "Home" ? "/" : `/`}
                     onClick={() => setShow(false)}
                     className="lg:hover:text-[#262626] hover:text-white lg:border-none border-b-2 border-[#767676] rounded-sm"
                   >
@@ -69,7 +66,6 @@ const Header = () => {
             </ul>
           </div>
 
-          {/* Mobile menu toggle */}
           <div className="lg:hidden cursor-pointer z-[999]" ref={barRef}>
             <FaBars />
           </div>
