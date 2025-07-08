@@ -122,7 +122,8 @@ const Navbar = () => {
               className="flex items-center gap-x-3 cursor-pointer"
             >
               <FaBars />
-              <p className="text-[14px] font-sans font-normal hidden lg:block hover:text-[#262626] text-[#262626] transition ease-in-out delay-400">
+              <p className="text-[14px] font-sans font-normal hidden lg:block hover:text-[#262626]
+               text-[#262626] transition ease-in-out delay-400">
                 Shop by Category
               </p>
               {catshow && (
@@ -138,7 +139,7 @@ const Navbar = () => {
                     ].map(cat => (
                       <li
                         key={cat}
-                        className="py-[10px] hover:pl-5 border-b border-[#D8D8D8]"
+                        className="py-[10px] hover:translate-x-5 duration-300 ease-in-out border-b border-[#D8D8D8]"
                       >
                         {cat}
                       </li>
@@ -195,15 +196,15 @@ const Navbar = () => {
                 <IoMdArrowDropdown />
               </div>
               {usershow && (
-                <div className="bg-[#000] lg:block hidden w-[250px] py-5 px-5 absolute top-[50px] z-50 lg:left-0 left-[-150px] text-center rounded-md">
+                <div className="bg-[#000] w-[250px] py-5 px-5 absolute top-[50px] z-50 lg:left-0 left-[-200px] text-center rounded-md">
                   <ul className="text-white font-sans text-[16px] capitalize cursor-pointer">
-                    <li className="pb-[10px] hover:pl-[10px] font-sans text-[18px] font-medium">
+                    <li className="pb-[10px] hover:pl-[10px] duration-300 ease-in-out font-sans text-[18px] font-medium">
                       sign up
                     </li>
-                    <li className="pb-[10px] hover:pl-[10px] font-sans text-[18px] font-medium cursor-pointer">
+                    <li className="pb-[10px] hover:pl-[10px] duration-300 ease-in-out font-sans text-[18px] font-medium cursor-pointer">
                       login
                     </li>
-                    <li className="pb-[10px] hover:pl-[10px] font-sans text-[18px] font-medium cursor-pointer">
+                    <li className="pb-[10px] hover:pl-[10px] duration-300 ease-in-out font-sans text-[18px] font-medium cursor-pointer">
                       my account
                     </li>
                   </ul>
