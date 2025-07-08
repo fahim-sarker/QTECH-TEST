@@ -59,11 +59,11 @@ Browse the source code on GitHub:
 
 ## How to Run Locally
 
-1. **Clone the repository**
-# git clone https://github.com/fahim-sarker/QTECH-TEST.git
-# cd QTECH-TEST
-# npm install
-# npm run dev
+**Clone the repository**
+1. git clone https://github.com/fahim-sarker/QTECH-TEST.git
+2. cd QTECH-TEST
+3. npm install
+4. npm run dev
 
 
 
