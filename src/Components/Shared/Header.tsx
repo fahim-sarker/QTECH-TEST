@@ -55,7 +55,7 @@ const Header = () => {
               {["Home", "Shop", "About", "Contact", "Journal"].map(item => (
                 <li key={item}>
                   <Link
-                    to={item === "Home" ? "/" : `/`}
+                    to={item === "Home" ? "/" : ""}
                     onClick={() => setShow(false)}
                     className="lg:hover:text-[#262626] hover:text-white lg:border-none border-b-2 border-[#767676] rounded-sm"
                   >
