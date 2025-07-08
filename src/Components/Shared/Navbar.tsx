@@ -227,7 +227,8 @@ const Navbar = () => {
                       : "translate-x-full"
                   }`}
                 >
-                  <div className="flex justify-end p-3">
+                  <div className="flex justify-end p-5">
+                    <h3 className="font-semibold font-sans text-xl">Cart items</h3>
                     <button
                       onClick={() => setUserCartShow(false)}
                       className="text-2xl"
