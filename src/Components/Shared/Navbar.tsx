@@ -122,13 +122,15 @@ const Navbar = () => {
               className="flex items-center gap-x-3 cursor-pointer"
             >
               <FaBars />
-              <p className="text-[14px] font-sans font-normal hidden lg:block hover:text-[#262626]
-               text-[#262626] transition ease-in-out delay-400">
+              <p
+                className="text-[14px] font-sans font-normal hidden lg:block hover:text-[#262626]
+               text-[#262626] transition ease-in-out delay-400"
+              >
                 Shop by Category
               </p>
               {catshow && (
-                <div className="z-50 absolute top-[180px] bg-[#262626] w-[250px] pl-[10px] py-[20px]">
-                  <ul className="text-[14px] font-sans font-normal text-white capitalize">
+                <div className="z-50 absolute top-[180px] bg-[#262626] w-[250px] p-[10px] py-[20px]">
+                  <ul className="text-[14px] font-sans font-normal text-white capitalize overflow-hidden">
                     {[
                       "accessories",
                       "furniture",
@@ -229,7 +231,9 @@ const Navbar = () => {
                   }`}
                 >
                   <div className="flex justify-between p-5">
-                    <h3 className="font-semibold font-sans text-xl">Cart items</h3>
+                    <h3 className="font-semibold font-sans text-xl">
+                      Cart items
+                    </h3>
                     <button
                       onClick={() => setUserCartShow(false)}
                       className="text-2xl cursor-pointer"
