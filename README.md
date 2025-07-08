@@ -1,69 +1,89 @@
-# React + TypeScript + Vite
+# Qtec Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple, responsive single-page e-commerce web application built with **React**, **TypeScript**, **Redux Toolkit**, **Context API**, and **Axios**.  
+The project was developed as part of the **Frontend Developer Assessment Task** for **Qtec Solution Limited**.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+**Home Page**
+- Displays a list of  products, fetched using Context API and Axios.
+- Each product shows an image, title, price, and an **Add to Cart** button.
+- Clicking a product navigates to a **Product Detail** page.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Product Detail Page**
+- Displays full product details including image, title, description, and price.
+- Includes an **Add to Cart** button.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Cart Sidebar**
+- Slide-in/out sidebar listing added products.
+- Add to cart page Includes quantity controls (increase/decrease).
+- Shows the total amount at the bottom.
+- Contains a **Checkout** button.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+**Checkout Modal**
+- Opens a form when the user clicks the **Checkout** button.
+- Form fields: Name, Email, and Address.
+- Simulates an order placement (no real API).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Responsive Design**
+- Fully responsive layout with a clean, modern card-based UI.
+- Mobile-first and cross-browser compatible.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Single Page Application (SPA)**
+- Client-side routing via React Router DOM.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Tech Stack
+
+- React.js (with TypeScript)
+- Redux Toolkit (Cart State Management)
+- Context API (Product Data Fetching)
+- Axios (HTTP Requests)
+- Tailwind CSS (Styling)
+- React Router DOM (SPA Routing)
+- Netlify (Deployment)
+
+
+## Live Demo
+
+You can access the live deployed version here:  
+[https://qtech-assessment.netlify.app/](https://qtech-assessment.netlify.app/)
+
+
+## GitHub Repository
+
+Browse the source code on GitHub:  
+[https://github.com/fahim-sarker/QTECH-TEST](https://github.com/fahim-sarker/QTECH-TEST)
+
+
+## How to Run Locally
+
+1. **Clone the repository**
+git clone https://github.com/fahim-sarker/QTECH-TEST.git
+cd QTECH-TEST
+npm install
+npm run dev
+
+
+
+Requirements Covered
+
+React + TypeScript
+
+Redux for cart logic
+
+Context API + Axios for data
+
+Responsive UI with Tailwind CSS
+
+SPA routing with React Router
+
+GitHub version control
+
+Live deployment on Netlify
+
+Author
+Fahim Sarker
+Frontend Developer
+
