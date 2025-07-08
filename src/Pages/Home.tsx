@@ -121,7 +121,7 @@ const Home = () => {
               <div className="py-4">
                 <button
                   onClick={handleAllProducts}
-                  className="font-sans text-[16px] font-normal"
+                  className="font-sans text-[16px] font-normal cursor-pointer"
                 >
                   All Products
                 </button>
