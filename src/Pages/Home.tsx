@@ -14,7 +14,7 @@ const Home = () => {
   const [categorysearchfilter, setCategorysearchfilter] = useState<Product[]>(
     []
   );
-  const [menulist, Setmenulist] = useState("");
+  const [menulist] = useState("");
   const [bandgory, SetBandgory] = useState<string[]>([]);
 
   const catref = useRef<HTMLDivElement>(null);
