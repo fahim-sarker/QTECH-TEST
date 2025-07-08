@@ -60,10 +60,10 @@ Browse the source code on GitHub:
 ## How to Run Locally
 
 1. **Clone the repository**
-git clone https://github.com/fahim-sarker/QTECH-TEST.git
-cd QTECH-TEST
-npm install
-npm run dev
+# git clone https://github.com/fahim-sarker/QTECH-TEST.git
+# cd QTECH-TEST
+# npm install
+# npm run dev
 
 
 
